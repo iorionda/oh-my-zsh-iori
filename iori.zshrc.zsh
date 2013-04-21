@@ -1,9 +1,5 @@
 # users generic .zshrc file for zsh(1)
 
-## Default LESS configuration
-export LESS='-R'
-export LESSOPEN='| ~/local/bin/src-hilite-lesspipe.sh %s'
-
 ## Keybind configuration
 # emacs like keybind (e.x. Ctrl-a goes to head of a line and Ctrl-e goes
 #   to end of it)
@@ -42,15 +38,6 @@ setopt hist_ignore_space
 
 # すぐにヒストリファイルに追記する
 setopt inc_append_history
-
-# ヒストリを保存するファイル
-export HISTFILE=~/.zsh_history
-
-# メモリ上のヒストリ数
-export HISTFILESIZE=100000000
-
-# 保存するヒストリ数
-export SAVEHIST=$HISTFILESIZE
 
 # 余分な空白は詰める
 setopt hist_reduce_blanks
@@ -217,13 +204,6 @@ setopt brace_ccl
 # jobsでプロセスIDも表示する
 setopt long_list_jobs
 
-## preport time
-# 実行したプロセスの消費時間が3秒以上なら
-# 自動的に消費時間の統計情報を表示する
-export PREPORTTIME=3
-
-## Default git configuration
-export GIT_PAGER='/usr/local/bin/lv -c -Au8'
 
 # 新規ディレクトリは755， 新規ファイルは644にする
 umask 022
@@ -245,40 +225,6 @@ setopt nolistbeep
 # auto-fu.zshと相性が悪いのでコメントアウト
 #autoload -Uz url-quote-magic
 # zle -N self-insert url-quote-magic
-
-## terminal configuration
-## http://journal.mycom.co.jp/column/zsh/009/index.html
-unset LSCOLORS
-
-case "${TERM}" in
-xterm)
-    export TERM=xterm-color
-    ;;
-kterm)
-    export TERM=kterm-color
-    # set BackSpace control character
-    stty erase
-    ;;
-
-cons25)
-    unset LANG
-    export LS_COLORS='di=01;32:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30'
-    zstyle ':completion:*' list-colors \
-    'di=;36;1' 'ln=;35;1' 'so=;32;1' 'ex=31;1' 'bd=46;34' 'cd=43;34'
-;;
-
-kterm*|xterm*)
-    export CLICOLOR=1
-    export LSCOLORS=ExFxCxDxBxegedabagacad
-
-    zstyle ':completion:*' list-colors \
-    'di=36' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
-;;
-
-dumb)
-    echo "Welcome Emacs Shell"
-    ;;
-esac
 
 REPORTTIME=3
 
