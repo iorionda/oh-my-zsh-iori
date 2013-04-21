@@ -12,3 +12,19 @@ export MANPATH=$MANPATH:/opt/local/man:/usr/local/share/man
 # Defaults mercurial configuration
 #
 export HGENCODING=utf-8
+
+# rbenv
+#
+if which rbenv > /dev/null; then
+    eval "$(rbenv init - zsh)"
+fi
+
+
+case $OSTYPE {
+    linux*)
+        ZSH_THEME="gentoo"
+        plugins=(git);;
+    darwin*)
+        ZSH_THEME="iori"
+        plugins=(git osx ruby brew rbenv virtualenvwrapper);;
+}
