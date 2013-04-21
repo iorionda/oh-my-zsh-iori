@@ -12,12 +12,3 @@ export MANPATH=$MANPATH:/opt/local/man:/usr/local/share/man
 # Defaults mercurial configuration
 #
 export HGENCODING=utf-8
-
-case $OSTYPE {
-    linux*)
-        ZSH_THEME="gentoo"
-        plugins=(git);;
-    darwin*)
-        ZSH_THEME="iori"
-        plugins=(git osx ruby brew rbenv);;
-}
