@@ -20,6 +20,7 @@ local HISTORY='%{$fg_bold[blue]%}[ %{$reset_color%}%h%{$fg_bold[blue]%} ]'
 PROMPT="┌─${PREFIX}${USER_HOST} in ${CURRENT_DIR}${GIT_BRANCH}${SUFFIX}-${PREFIX}${RBENV}${SUFFIX}-${PREFIX}${DATETIME}${SUFFIX}-${PREFIX}${RETURN_CODE}${SUFFIX}
 └─ %# "
 RPROMPT="$(prompt_char)"
+setopt transient_rprompt
 
 # git theming
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[green]%}"
