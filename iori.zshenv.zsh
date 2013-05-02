@@ -3,7 +3,7 @@
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 
-export EDITOR=subl
+export EDITOR=emacs
 export PATH=$PATH:$HOME/local/bin:/usr/local/git/bin
 export PATH=$PATH:$HOME/dotfiles/bin
 export PATH=$PATH:/sbin:usr/local/bin
