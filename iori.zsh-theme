@@ -5,8 +5,8 @@ function prompt_char {
     echo '○'
 }
 
-local PREFIX='%{$fg_bold[blue]%}[ '
-local SUFFIX='%{$fg_bold[blue]%} ]%{$reset_color%}'
+local PREFIX='%{$fg[blue]%}[ '
+local SUFFIX='%{$fg[blue]%} ]%{$reset_color%}'
 
 local USER_HOST='%{$fg[cyan]%}%n%{$reset_color%} at %{$fg[cyan]%}%m%{$reset_color%}'
 local CURRENT_DIR='%{$fg[cyan]%}%~%{$reset_color%}'
