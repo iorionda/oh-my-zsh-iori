@@ -17,8 +17,8 @@ local DATETIME='%{$fg[red]%}%D{%Y/%m/%d %H:%M}%{$reset_color%}'
 local JOBS='%(1j, %{$fg_bold[blue]%}[ %{$reset_color%}%j%{$fg_bold[blue]%} ],)%{$reset_color%}'
 local HISTORY='%{$fg_bold[blue]%}[ %{$reset_color%}%h%{$fg_bold[blue]%} ]'
 
-PROMPT="┌─${PREFIX}${USER_HOST} in ${CURRENT_DIR}${GIT_BRANCH}${SUFFIX}-${PREFIX}${RBENV}${SUFFIX}-${PREFIX}${DATETIME}${SUFFIX}-${PREFIX}${RETURN_CODE}${SUFFIX}
-└─ %# "
+PROMPT="${PREFIX}${USER_HOST} in ${CURRENT_DIR}${GIT_BRANCH}${SUFFIX}-${PREFIX}${RBENV}${SUFFIX}-${PREFIX}${DATETIME}${SUFFIX}-${PREFIX}${RETURN_CODE}${SUFFIX}
+%# "
 RPROMPT="$(prompt_char)"
 setopt transient_rprompt
 
