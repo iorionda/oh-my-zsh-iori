@@ -8,7 +8,7 @@ function prompt_char {
 local PREFIX='%{$fg[blue]%}[ '
 local SUFFIX='%{$fg[blue]%} ]%{$reset_color%}'
 
-local USER_HOST='%{$fg[cyan]%}%n%{$reset_color%} at %{$fg[cyan]%}%m%{$reset_color%}'
+local USER_HOST='%{$fg[cyan]%}%n%{$reset_color%} at %{$fg[cyan]%}$(hostname)%{$reset_color%}'
 local CURRENT_DIR='%{$fg[cyan]%}%~%{$reset_color%}'
 local RETURN_CODE='%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%?%{$reset_color%}'
 local GIT_BRANCH='$(git_prompt_info)$(git_prompt_status)'
