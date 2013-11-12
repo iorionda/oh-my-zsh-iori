@@ -5,12 +5,6 @@
 #   to end of it)
 bindkey -e
 
-# 素早くvvを入力した時に最後に実行したvimを実行する
-bindkey -s "vv" "!vi\n"
-
-# 素早く:qを入力した時に端末を終了する
-bindkey -s ':q' "^A^Kexit\n"
-
 # エラーメッセージ本文出力に色付け
 e_normal=`echo -e "¥033[0;30m"`
 e_RED=`echo -e "¥033[1;31m"`
@@ -204,7 +198,6 @@ setopt brace_ccl
 # jobsでプロセスIDも表示する
 setopt long_list_jobs
 
-
 # 新規ディレクトリは755， 新規ファイルは644にする
 umask 022
 
@@ -252,4 +245,3 @@ esac
 
 # local固有設定
 [ -f ~/.dotfiles/.zshrc.local ] && source ~/.dotfiles/.zshrc.local
-
